@@ -87,3 +87,6 @@
 .rst-base td, .rst-base tr{
   max-height: 35px;
 }
+.rst-data-placeholder{
+  visibility: hidden;
+}

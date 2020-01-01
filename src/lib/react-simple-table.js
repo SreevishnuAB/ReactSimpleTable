@@ -2,11 +2,20 @@ import React, { useState } from 'react';
 import './react-simple-table.css';
 import PropTypes from 'prop-types';
 
+const resolveClassName = (value)=>{
+  if(value === "")
+    return "rst-data-placeholder";
+  if(isNaN(parseInt(value)))
+    return "rst-align-lt rst-data";
+  else
+    return "rst-align-rt rst-data";
+}
+
 const generateTableBody = (tableData)=>{
   const tableBody = (tableData.map((object, index)=>(
     <tr key={`trow${index}`}>
       {Object.values(object).map((value, index)=>(
-        <td className={(isNaN(parseInt(value)))?"rst-align-lt rst-data":"rst-align-rt rst-data"} key={`tdata${index}`}>
+        <td className={resolveClassName(value)} key={`tdata${index}`}>
           {value}
         </td>
       ))}
