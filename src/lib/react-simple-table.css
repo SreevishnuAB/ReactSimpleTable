@@ -26,24 +26,24 @@
 }
 .rst-container th, .rst-container td{
   border-color: #424242;
-  border-width: 1px;
+  border-width: 1px 0px;
   border-style: solid;
   max-width: 10%;
 }
 .rst-container th{
   height: 50px;
+  padding: 0px 10px;
 }
 .rst-container td{
   height: 35px;
   max-height: 35px;
+  padding: 0px 10px;
 }
 .rst-align-rt{
   text-align: right;
-  padding-right: 10px;
 }
 .rst-align-lt{
   text-align: left;
-  padding-left: 10px;
 }
 .ripple{
   position: relative;
@@ -64,7 +64,7 @@
   background-position: 50%;
   transform: scale(10, 10);
   opacity: 0;
-  transition: transform .5s, opacity 1s;
+  transition: transform 0s, opacity 0.5s;
 }
 .ripple:active:after {
   transform: scale(0, 0);
@@ -80,13 +80,7 @@
   color: inherit;
   outline: none;
 }
-.rst-data{
-  flex-grow: 1;
-  flex-shrink: 1;
-}
-.rst-base td, .rst-base tr{
-  max-height: 35px;
-}
+
 .rst-data-placeholder{
   visibility: hidden;
 }

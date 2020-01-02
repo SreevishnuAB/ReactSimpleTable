@@ -5,107 +5,107 @@ const demoData = [
 	{
 		color: "red",
 		value: "#f00",
-    asd: "qwe"
+    asd: "123"
 	},
 	{
 		color: "green",
 		value: "#0f0",
-    asd: "qwe"
+    asd: "23"
 	},
 	{
 		color: "blue",
 		value: "#00f",
-    asd: "qwe"
+    asd: "345"
 	},
 	{
 		color: "cyan",
 		value: "#0ff",
-    asd: "qwe"
+    asd: "6786"
 	},
 	{
 		color: "magenta",
 		value: "#f0f",
-    asd: "qwe"
+    asd: "235"
 	},
 	{
 		color: "yellow",
 		value: "#ff0",
-    asd: "qwe"
+    asd: "353"
 	},
 	{
 		color: "black",
 		value: "#000",
-    asd: "qwe"
+    asd: "75678"
   },
   {
 		color: "red",
 		value: "#f00",
-    asd: "qwe"
+    asd: "908"
 	},
 	{
 		color: "green",
 		value: "#0f0",
-    asd: "qwe"
+    asd: "2342"
 	},
 	{
 		color: "blue",
     value: "#00f",
-    asd: "qwe"
+    asd: "122"
 	},
 	{
 		color: "cyan",
 		value: "#0ff",
-    asd: "qwe"
+    asd: "087"
 	},
 	{
 		color: "magenta",
 		value: "#f0f",
-    asd: "qwe"
+    asd: "4634"
 	},
 	{
 		color: "yellow",
 		value: "#ff0",
-    asd: "qwe"
+    asd: "15414"
 	},
 	{
 		color: "black",
 		value: "#000",
-    asd: "qwe"
+    asd: "786"
   },
   {
 		color: "red",
 		value: "#f00",
-    asd: "qwe"
+    asd: "2342"
 	},
 	{
 		color: "green",
 		value: "#0f0",
-    asd: "qwe"
+    asd: "12321"
 	},
 	{
 		color: "blue",
 		value: "#00f",
-    asd: "qwe"
+    asd: "56456"
 	},
 	{
 		color: "cyan",
 		value: "#0ff",
-    asd: "qwe"
+    asd: "756"
 	},
 	{
 		color: "magenta",
 		value: "#f0f",
-    asd: "qwe"
+    asd: "6746"
 	},
 	{
 		color: "yellow",
 		value: "#ff0",
-    asd: "qwe"
+    asd: "345"
 	},
 	{
 		color: "black",
     value: "#000",
-    asd: "qwe"
+    asd: "756"
 	},
 ];
 

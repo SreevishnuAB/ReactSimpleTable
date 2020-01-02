@@ -1,10 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect} from 'react';
 import './react-simple-table.css';
 import PropTypes from 'prop-types';
 
-const resolveClassName = (value)=>{
-  if(value === "")
+const resolveClassNameTr = (object) =>{
+  if(Object.values(object).includes(undefined))
     return "rst-data-placeholder";
+}
+
+const resolveClassName = (value)=>{
+
+  if(value === undefined)
+    return "";
+
   if(isNaN(parseInt(value)))
     return "rst-align-lt rst-data";
   else
@@ -13,7 +20,7 @@ const resolveClassName = (value)=>{
 
 const generateTableBody = (tableData)=>{
   const tableBody = (tableData.map((object, index)=>(
-    <tr key={`trow${index}`}>
+    <tr className={resolveClassNameTr(object)} key={`trow${index}`}>
       {Object.values(object).map((value, index)=>(
         <td className={resolveClassName(value)} key={`tdata${index}`}>
           {value}
@@ -38,10 +45,28 @@ export default function ReactSimpleTable(props){
 //  const testData = [{key1:"value1",key2:"key2"}, {key1:"value1",key2:"key2"}, {key1:"value1",key2:"key2"}]; //for testing
 
   const [currPage, setCurrPage] = useState(0);
-  const tableData = props.tableData;//for testing, actual: props.tableData
-  if(tableData.length % props.rowsPerPage > 0){
-    
-  }
+  const [propData, setPropData] = useState(props.tableData);
+
+  useEffect(()=>{
+    let data = propData;
+    const dataObj = {};
+
+    if(data.length % props.rowsPerPage > 0 && props.pagination ){
+
+      Object.keys(data[0]).forEach((key)=>{
+        dataObj[key] = undefined;
+      });
+      const placeholder = new Array(props.rowsPerPage - (data.length % props.rowsPerPage));
+      placeholder.fill(dataObj);
+//      console.log(placeholder);
+      data = data.concat(placeholder);
+      console.log(data);
+      setPropData(data);
+    }
+  },[propData, props.rowsPerPage, props.pagination]);
+
+  const tableData = propData;//for testing, actual: props.tableData
+
   const rowsPerPage = props.rowsPerPage;//for testing, actual: props.rowsPerPage
   const numPages = (parseInt(tableData.length / rowsPerPage)) + ((tableData.length % rowsPerPage > 0)? 1: 0);
 
