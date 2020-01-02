@@ -81,6 +81,6 @@
   outline: none;
 }
 
-.rst-data-placeholder{
+.rst-data-placeholder, .rst-btn-hidden{
   visibility: hidden;
 }

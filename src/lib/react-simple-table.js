@@ -99,13 +99,13 @@ export default function ReactSimpleTable(props){
                         <tr>
                           <td colSpan={`${Object.keys(tableData[0]).length}`}>
                             <span className="rst-footer">
-                              <button className="ripple rst-btn" disabled={disablePrevious()} onClick={handlePrevious}>
+                              <button className={(disablePrevious())?"rst-btn rst-btn-hidden" :"ripple rst-btn"} onClick={handlePrevious}>
                                 {'<'}
                               </button>
                               <span>
                                 {currPage+1} of {numPages}
                               </span>
-                              <button className="ripple rst-btn" disabled={disableNext()} onClick={handleNext}>
+                              <button className={(disableNext())?"rst-btn rst-btn-hidden" :"ripple rst-btn"} onClick={handleNext}>
                                 {'>'}
                               </button>
                             </span>
@@ -138,5 +138,5 @@ ReactSimpleTable.propTypes = {
 
 ReactSimpleTable.defaultProps = {
   pagination: false,
-  rowsPerPage: 2,
+  rowsPerPage: 5,
 }
